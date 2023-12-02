@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handyman Website Features</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table id="featuresTable">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Estimated Hours</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="feature-row" data-price="80">
+                <td>Home Page</td>
+                <td>2</td>
+                <td contenteditable="true">Engaging design, navigation menu, hero image, introductory text, CTA buttons, service overview.</td>
+                <td>$80</td>
+            </tr>
+            <tr class="feature-row" data-price="80">
+                <td>About Us Page</td>
+                <td>2</td>
+                <td contenteditable="true">Business history, team, mission, photos, and bios.</td>
+                <td>$80</td>
+            </tr>
+            <tr class="feature-row" data-price="240">
+                <td>Services Page</td>
+                <td>6</td>
+                <td contenteditable="true">Detailed descriptions of services offered, categorized.</td>
+                <td>$240</td>
+            </tr>
+            <tr class="feature-row" data-price="240">
+                <td>Portfolio/Gallery</td>
+                <td>6</td>
+                <td contenteditable="true">Showcase of past projects with images and descriptions.</td>
+                <td>$240</td>
+            </tr>
+            <tr class="feature-row" data-price="240">
+                <td>Testimonials/Reviews</td>
+                <td>6</td>
+                <td contenteditable="true">Customer testimonials and reviews section.</td>
+                <td>$240</td>
+            </tr>
+            <tr class="feature-row" data-price="200">
+                <td>Contact Form</td>
+                <td>5</td>
+                <td contenteditable="true">Contact form with essential fields for client inquiries.</td>
+                <td>$200</td>
+            </tr>
+            <tr class="feature-row" data-price="600">
+                <td>Blog Section</td>
+                <td>15</td>
+                <td contenteditable="true">Blog for tips, company news, industry insights, includes CMS.</td>
+                <td>$600</td>
+            </tr>
+            <tr class="feature-row" data-price="120">
+                <td>FAQ Section</td>
+                <td>3</td>
+                <td contenteditable="true">Frequently Asked Questions section.</td>
+                <td>$120</td>
+            </tr>
+            <tr class="feature-row" data-price="400">
+                <td>SEO Optimization</td>
+                <td>10</td>
+                <td contenteditable="true">Search engine optimization for better online visibility.</td>
+                <td>$400</td>
+            </tr>
+            <tr class="feature-row" data-price="480">
+                <td>Responsive Design</td>
+                <td>12</td>
+                <td contenteditable="true">Mobile-friendly, responsive website design.</td>
+                <td>$480</td>
+            </tr>
+            <tr class="feature-row" data-price="160">
+                <td>Social Media Integration</td>
+                <td>4</td>
+                <td contenteditable="true">Links to social media, content sharing options.</td>
+                <td>$160</td>
+            </tr>
+            <tr class="feature-row" data-price="80">
+                <td>Analytics Integration</td>
+                <td>2</td>
+                <td contenteditable="true">Google Analytics integration for traffic and behavior tracking.</td>
+                <td>$80</td>
+            </tr>
+            <tr class="feature-row" data-price="800">
+                <td>Online Booking System</td>
+                <td>20</td>
+                <td contenteditable="true">Online appointment booking with calendar view.</td>
+                <td>$800</td>
+            </tr>
+            <tr class="feature-row" data-price="600">
+                <td>Payment Gateway Integration</td>
+                <td>15</td>
+                <td contenteditable="true">Online payment system integration.</td>
+                <td>$600</td>
+            </tr>
+            <tr class="feature-row" data-price="320">
+                <td>User Registration/Login</td>
+                <td>8</td>
+                <td contenteditable="true">Account creation, login, profile management, service history.</td>
+                <td>$320</td>
+            </tr>
+            <tr class="feature-row" data-price="120">
+                <td>Email Newsletter Signup</td>
+                <td>3</td>
+                <td contenteditable="true">Newsletter/update signup feature.</td>
+                <td>$120</td>
+            </tr>
+            <tr class="feature-row" data-price="400">
+                <td>Live Chat Support</td>
+                <td>10</td>
+                <td contenteditable="true">Real-time customer support chat feature.</td>
+                <td>$400</td>
+            </tr>
+               
+        </tbody>
+    </table>
+    <div id="totalCost">Total Cost: $0</div>
+    
+    
+        <div id="timelineSelection">
+        <h3>Select the timeline for your website:</h3>
+        <div class="timeline-option" data-adjustment="200">
+            <span>Expedited (additional $200)</span>
+        </div>
+        <div class="timeline-option" data-adjustment="0">
+            <span>2 months</span>
+        </div>
+        <div class="timeline-option" data-adjustment="0">
+            <span>4 months</span>
+        </div>
+        <div class="timeline-option" data-adjustment="-5">
+            <span>9 months (5% discount offered)</span>
+        </div>
+    </div>
+    
+    
+    <div id="additionalInfo">
+        <h3>Any additional information or requests:</h3>
+        <textarea id="additionalRequests" rows="4" cols="50" placeholder="Enter any additional details here..."></textarea>
+        <button id="submitInfo">Submit</button>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
