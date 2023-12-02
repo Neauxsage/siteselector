@@ -1,0 +1,55 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const rows = document.querySelectorAll('.feature-row');
+    let totalCost = 0;
+    let timelineAdjustment = 0;
+
+    // Feature row selection and cost calculation
+    rows.forEach(row => {
+        row.addEventListener('click', function() {
+            const price = parseInt(this.dataset.price);
+            if (this.classList.contains('selected')) {
+                totalCost -= price;
+                this.classList.remove('selected');
+            } else {
+                totalCost += price;
+                this.classList.add('selected');
+            }
+            updateTotalCost();
+        });
+    });
+
+    // Timeline selection and adjustment
+    const timelineOptions = document.querySelectorAll('.timeline-option');
+    timelineOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            document.querySelectorAll('.timeline-option').forEach(opt => opt.classList.remove('selected-timeline'));
+            this.classList.add('selected-timeline');
+            timelineAdjustment = parseInt(this.dataset.adjustment);
+            updateTotalCost();
+        });
+    });
+
+
+
+    // Editable descriptions
+    document.querySelectorAll('td[contenteditable="true"]').forEach(td => {
+        td.addEventListener('focusout', function() {
+            // Implement logic to handle the edited content
+            console.log('Edited content:', this.innerText);
+        });
+    });
+
+    function updateTotalCost() {
+        let adjustedCost = totalCost;
+        if (timelineAdjustment >= 0) {
+            adjustedCost += timelineAdjustment;
+        } else {
+            adjustedCost -= Math.abs(totalCost * timelineAdjustment / 100);
+        }
+        document.getElementById('totalCost').innerText = 'Total Cost: $' + adjustedCost;
+        
+        
+        
+        
+    }
+});
